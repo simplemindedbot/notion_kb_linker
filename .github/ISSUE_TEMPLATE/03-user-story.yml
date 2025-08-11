@@ -1,0 +1,209 @@
+name: =Ë User Story
+description: Create a detailed user story for development implementation
+title: "[STORY] "
+labels: ["user-story", "needs-estimation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a detailed user story following agile best practices. This template ensures all stories are well-defined and ready for development.
+
+  - type: input
+    id: epic
+    attributes:
+      label: Epic Reference
+      description: Which epic does this story belong to?
+      placeholder: "e.g., Epic 1: Foundation and Database Integration"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority (MoSCoW)
+      description: Priority level using MoSCoW method
+      options:
+        - Must-have (MVP/Critical)
+        - Should-have (Important)
+        - Could-have (Nice-to-have)
+        - Won't-have (Future release)
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story Statement
+      description: The core user story in standard format
+      placeholder: "As a [user role], I want [functionality] so that [business value]"
+      value: "As a , I want  so that "
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Comprehensive description of what needs to be implemented
+      placeholder: Provide detailed context about the functionality, user needs, and business rationale
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Specific, testable criteria that must be met (Given-When-Then format preferred)
+      placeholder: |
+        - Given [initial context]
+        - When [action occurs]
+        - Then [expected outcome]
+        - And [additional requirements]
+        
+        Additional criteria:
+        - [Specific requirement]
+        - [Another requirement]
+    validations:
+      required: true
+
+  - type: textarea
+    id: business-value
+    attributes:
+      label: Business Value and Rationale
+      description: Why is this story important? What value does it provide?
+      placeholder: Explain the business value, user benefit, or technical necessity
+    validations:
+      required: true
+
+  - type: textarea
+    id: functional-requirements
+    attributes:
+      label: Functional Requirements
+      description: Specific functional requirements and behaviors
+      placeholder: |
+        - Input: What data/parameters are required
+        - Processing: What the system should do
+        - Output: What results should be produced
+        - Error handling: How errors should be managed
+
+  - type: textarea
+    id: technical-requirements
+    attributes:
+      label: Technical Requirements
+      description: Technical constraints, APIs, libraries, or architectural considerations
+      placeholder: |
+        - Technology stack requirements
+        - API integrations needed
+        - Performance requirements
+        - Security considerations
+        - Data storage requirements
+
+  - type: textarea
+    id: ui-requirements
+    attributes:
+      label: UI/UX Requirements
+      description: User interface and user experience requirements
+      placeholder: |
+        - CLI command structure
+        - Output formatting requirements
+        - Interactive elements needed
+        - Progress indicators
+        - Error message formatting
+
+  - type: dropdown
+    id: story-points
+    attributes:
+      label: Story Points Estimate
+      description: Rough effort estimate (Fibonacci scale)
+      options:
+        - "1 - Trivial (few hours)"
+        - "2 - Small (half day)"
+        - "3 - Medium (1 day)"
+        - "5 - Large (2-3 days)"
+        - "8 - Very Large (1 week)"
+        - "13 - Epic (needs breakdown)"
+        - "? - Needs investigation"
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What other stories or external dependencies must be completed first?
+      placeholder: |
+        - Story dependencies: US-001, US-003
+        - External dependencies: Notion API access
+        - Technical dependencies: sentence-transformers library
+
+  - type: textarea
+    id: assumptions
+    attributes:
+      label: Assumptions and Constraints
+      description: Key assumptions being made and any constraints
+      placeholder: |
+        Assumptions:
+        - Users have valid Notion integration tokens
+        - Database contains text-based content
+        
+        Constraints:
+        - Must respect Notion API rate limits
+        - Memory usage should not exceed 2GB
+
+  - type: textarea
+    id: test-scenarios
+    attributes:
+      label: Test Scenarios
+      description: Key test scenarios that should be covered
+      placeholder: |
+        Happy path:
+        - [Scenario 1]
+        - [Scenario 2]
+        
+        Error conditions:
+        - [Error scenario 1]
+        - [Error scenario 2]
+        
+        Edge cases:
+        - [Edge case 1]
+        - [Edge case 2]
+
+  - type: textarea
+    id: definition-of-ready
+    attributes:
+      label: Definition of Ready Checklist
+      description: Criteria that must be met before development starts
+      value: |
+        - [ ] User story is clearly written and understood
+        - [ ] Acceptance criteria are specific and testable
+        - [ ] Dependencies are identified and resolved
+        - [ ] Story is properly sized (not too large)
+        - [ ] Technical approach is understood
+        - [ ] UI/UX requirements are defined
+        - [ ] Test scenarios are identified
+      render: markdown
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done Checklist
+      description: Criteria that must be met before story is considered complete
+      value: |
+        - [ ] All acceptance criteria are met
+        - [ ] Unit tests written and passing (90%+ coverage)
+        - [ ] Integration tests written and passing
+        - [ ] Code follows project standards and passes linting
+        - [ ] Security scan passes with no high-severity issues
+        - [ ] Documentation updated (user docs, API docs, code comments)
+        - [ ] Performance requirements verified
+        - [ ] Error handling implemented and tested
+        - [ ] Code reviewed and approved
+        - [ ] Manual testing completed
+        - [ ] Story demo completed and accepted
+      render: markdown
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any additional context, research, or implementation notes
+      placeholder: Research findings, architectural decisions, alternative approaches considered, etc.

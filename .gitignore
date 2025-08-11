@@ -202,3 +202,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project-specific files
+# Notion backup files
+backups/
+*.backup.json
+
+# Configuration files with sensitive data
+.env.local
+.env.production
+config.local.json
+
+# AI model cache directories
+.cache/
+models/
+
+# Application logs and outputs
+logs/
+output/
+reports/
+
+# IDE and editor files
+.vscode/settings.json
+.idea/workspace.xml

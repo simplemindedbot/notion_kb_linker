@@ -1,0 +1,175 @@
+name: = Bug Report
+description: Report a bug or unexpected behavior in the Notion KB Auto-Linker
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please fill out the information below to help us understand and reproduce the issue.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues for duplicates
+          required: true
+        - label: I have verified this is not a configuration issue
+          required: true
+        - label: I am using the latest version of the tool
+          required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe is this bug?
+      options:
+        - Critical (System crashes, data loss, security vulnerability)
+        - High (Major functionality broken, blocks workflow)
+        - Medium (Minor functionality affected, workaround available)
+        - Low (Cosmetic issue, minor inconvenience)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component/Area
+      description: Which component is affected?
+      options:
+        - Database Connection
+        - Content Extraction
+        - Content Analysis
+        - Tag Generation
+        - Link Recommendation
+        - Backup System
+        - CLI Interface
+        - Configuration
+        - Other/Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clear and concise description of what the bug is
+      placeholder: Describe what went wrong
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should have happened instead?
+      placeholder: Describe the expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: Describe what actually happened, including error messages
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the bug
+      placeholder: |
+        1. Go to...
+        2. Run command...
+        3. Enter data...
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Information
+      description: Please provide your environment details
+      placeholder: |
+        - OS: (e.g., macOS 13.0, Windows 11, Ubuntu 22.04)
+        - Python version: (e.g., 3.9.7)
+        - Tool version: (e.g., 1.0.0)
+        - Notion database size: (approximate number of pages)
+        - Configuration: (relevant config settings)
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: Error Messages and Logs
+      description: Complete error messages, stack traces, and relevant log entries
+      placeholder: Paste complete error messages and relevant log entries here
+      render: text
+
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuration Details
+      description: Relevant configuration settings (remove sensitive information)
+      placeholder: |
+        - SIMILARITY_THRESHOLD: 0.7
+        - MAX_LINKS_PER_PAGE: 10
+        - TAG_CONFIDENCE_THRESHOLD: 0.6
+        - Any other relevant settings
+      render: yaml
+
+  - type: textarea
+    id: sample-data
+    attributes:
+      label: Sample Data or Content
+      description: If relevant, provide sample data that triggers the bug (anonymized)
+      placeholder: Provide anonymized sample data that reproduces the issue
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does this bug occur?
+      options:
+        - Always (100%)
+        - Often (75-99%)
+        - Sometimes (25-75%)
+        - Rarely (1-25%)
+        - Only once
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: Is there a workaround for this issue?
+      placeholder: Describe any temporary workaround you've found
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other context, screenshots, or information about the problem
+      placeholder: Add any other context about the problem here
+
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: How does this bug affect your workflow?
+      options:
+        - label: Blocks my ability to use the tool
+        - label: Causes data integrity concerns
+        - label: Affects productivity but has workarounds
+        - label: Minor inconvenience
+        - label: Potential security implications

@@ -1,0 +1,136 @@
+name: =€ Feature Request
+description: Suggest a new feature or enhancement for the Notion KB Auto-Linker
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a feature! Please fill out the information below to help us understand your request.
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues and feature requests
+          required: true
+        - label: I have read the project documentation
+          required: true
+
+  - type: dropdown
+    id: epic
+    attributes:
+      label: Epic/Category
+      description: Which epic or category does this feature belong to?
+      options:
+        - Database Integration
+        - Content Analysis
+        - Tag Generation
+        - Cross-Link Discovery  
+        - Safety and Backup
+        - User Experience
+        - Configuration Management
+        - Other/New Category
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature?
+      options:
+        - Must-have (Critical for basic functionality)
+        - Should-have (Important for complete experience)
+        - Could-have (Nice to have, not essential)
+        - Won't-have (Out of scope for current version)
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User Story
+      description: Describe this feature as a user story
+      placeholder: "As a [user type], I want [functionality] so that [business value]"
+      value: "As a , I want  so that "
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description
+      description: Provide a detailed description of the feature
+      placeholder: Explain what the feature should do, how it should work, and why it's valuable
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the acceptance criteria for this feature
+      placeholder: |
+        - Given [context]
+        - When [action]
+        - Then [expected result]
+        - And [additional requirements]
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases and Examples
+      description: Provide specific use cases or examples
+      placeholder: Describe real-world scenarios where this feature would be used
+
+  - type: textarea
+    id: technical-considerations
+    attributes:
+      label: Technical Considerations
+      description: Any technical requirements, constraints, or implementation ideas
+      placeholder: API requirements, performance considerations, security implications, etc.
+
+  - type: dropdown
+    id: effort-estimate
+    attributes:
+      label: Estimated Effort
+      description: Rough estimate of implementation complexity
+      options:
+        - Small (1-2 story points, few hours)
+        - Medium (3-5 story points, 1-3 days) 
+        - Large (8+ story points, 1+ weeks)
+        - Unknown/Needs Investigation
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List any dependencies on other features or external systems
+      placeholder: What needs to be completed before this feature can be implemented?
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Considerations
+      description: Identify any potential risks or important considerations
+      placeholder: Technical risks, user experience concerns, compatibility issues, etc.
+
+  - type: checkboxes
+    id: definition-of-done
+    attributes:
+      label: Definition of Done Checklist
+      description: Standard completion criteria (will be validated during implementation)
+      options:
+        - label: Acceptance criteria are met and tested
+        - label: Unit tests achieve 90%+ coverage
+        - label: Integration tests pass
+        - label: Code passes linting and security scans
+        - label: Documentation is updated
+        - label: Performance requirements are met
+        - label: Error handling is implemented

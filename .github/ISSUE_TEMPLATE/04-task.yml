@@ -1,0 +1,150 @@
+name: ™ Task
+description: Create a technical task or subtask for development work
+title: "[TASK] "
+labels: ["task"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for technical tasks, subtasks, or development work that isn't a complete user story.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: What type of task is this?
+      options:
+        - Development (Implementation work)
+        - Testing (Test creation or execution)
+        - Documentation (Documentation updates)
+        - Infrastructure (DevOps, CI/CD, environment)
+        - Research (Investigation or spike)
+        - Refactoring (Code improvement)
+        - Bug Fix (Specific bug resolution)
+        - Configuration (Setup or config changes)
+    validations:
+      required: true
+
+  - type: input
+    id: parent-story
+    attributes:
+      label: Parent User Story
+      description: If this is a subtask, reference the parent story
+      placeholder: "e.g., US-001, #123"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: Clear description of what needs to be done
+      placeholder: Describe the specific work that needs to be completed
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements and Specifications
+      description: Specific requirements or technical specifications
+      placeholder: |
+        - Technical requirements
+        - Performance criteria
+        - Integration requirements
+        - Quality standards
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Completion Criteria
+      description: How will we know this task is complete?
+      placeholder: |
+        This task is complete when:
+        - [ ] Criteria 1
+        - [ ] Criteria 2
+        - [ ] Criteria 3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort Estimate
+      description: Time estimate for this task
+      options:
+        - XS (< 2 hours)
+        - S (2-4 hours) 
+        - M (4-8 hours)
+        - L (1-2 days)
+        - XL (2-5 days)
+        - XXL (> 1 week, should be broken down)
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Task priority level
+      options:
+        - Critical (Blocking other work)
+        - High (Important, should be done soon)
+        - Medium (Normal priority)
+        - Low (Can be deferred)
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What needs to be completed before this task can start?
+      placeholder: List any blocking dependencies
+
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Implementation Details
+      description: Technical approach, architecture decisions, or implementation notes
+      placeholder: |
+        - Files to be modified
+        - Functions/classes to implement
+        - APIs to integrate
+        - Libraries to use
+        - Architectural considerations
+
+  - type: textarea
+    id: testing-requirements
+    attributes:
+      label: Testing Requirements
+      description: What testing is required for this task?
+      placeholder: |
+        - Unit tests needed
+        - Integration tests needed
+        - Manual testing steps
+        - Performance testing requirements
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Mitigation
+      description: Potential risks and how to mitigate them
+      placeholder: |
+        Risk: [Description]
+        Mitigation: [How to address]
+
+  - type: checkboxes
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      description: Standard completion criteria
+      options:
+        - label: Implementation completed as specified
+        - label: Code follows project standards
+        - label: Appropriate tests written and passing
+        - label: Code reviewed and approved
+        - label: Documentation updated if needed
+        - label: No security vulnerabilities introduced
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      description: Any additional context or implementation notes
+      placeholder: Research findings, alternative approaches, gotchas to watch out for, etc.

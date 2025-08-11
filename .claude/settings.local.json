@@ -3,7 +3,12 @@
     "allow": [
       "Bash(source:*)",
       "Bash(pip check)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "mcp__jetbrains__get_file_text_by_path",
+      "mcp__jetbrains__list_directory_tree",
+      "mcp__jetbrains__create_new_file",
+      "Bash(touch:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: =Ú Project Documentation
+    url: https://github.com/simplemindedbot/notion_kb_linker/blob/main/docs/requirements.md
+    about: View the project requirements and documentation
+  - name: =Ë Product Backlog
+    url: https://github.com/simplemindedbot/notion_kb_linker/blob/main/docs/product-backlog.md
+    about: View the prioritized product backlog and user stories
+  - name: =¬ Discussions
+    url: https://github.com/simplemindedbot/notion_kb_linker/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: S General Questions
+    url: https://github.com/simplemindedbot/notion_kb_linker/discussions/categories/q-a
+    about: Ask general questions about usage and setup
