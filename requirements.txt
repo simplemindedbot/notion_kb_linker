@@ -1,0 +1,30 @@
+# Core Notion API integration
+notion-client>=2.2.1
+
+# Semantic analysis and NLP
+sentence-transformers>=2.2.2
+scikit-learn>=1.3.0
+spacy>=3.6.1
+
+# Optional: Enhanced tag generation via OpenAI
+openai>=1.3.0
+
+# CLI interface and user experience
+click>=8.1.0
+rich>=13.5.0
+
+# Data processing and utilities
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.0.0
+
+# Configuration and environment
+python-dotenv>=1.0.0
+
+# Backup and serialization
+jsonlines>=3.1.0
